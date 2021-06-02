@@ -91,17 +91,27 @@ function makePanel({ title, content }/* what data does the panel need? */) {
   //  - the open button needs to go away (the 'hide-btn' class name controls this)
   //  - the close button needs to show (the 'hide-btn' class name controls this)
   //  - the contents need to show (the 'toggle-on' class name controls this)
-
+  panelButtons.addEventListener('click', () => {
+    openButton.classList.toggle('hide-btn')
+    closeButton.classList.toggle('hide-btn')
+    panelContent.classList.toggle('toggle-on')
+  })
 
   // don't forget to return the panel!
-  return null
+  return panel
 }
 
 
 // TASK 10- Loop through the panelData we imported from the data folder
 //  creating panels for each content and title and append them to the DOM.
 //  We can do this with a single forEach, or with a map and a forEach.
+const panelElements = panelData.map(panelData => {
+  return makePanel(panelData)
+})
 
+panelElements.forEach(panelElement => {
+  accordion.appendChild(panelElement)
+})
 
 // [STRETCH] Comment out the links inside the nav and
 // write a linkMaker that takes { href, className, text }
