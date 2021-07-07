@@ -18,9 +18,6 @@ const div2 = divMaker('web', 'green');
 document.body.prepend(div2);
 
 
-
-
-
 // TASK 0- Motivate demoing a small makeImage component
 //  that takes an { imgURL } and returns an img element.
 //  Then loop over these URLs making images as you go:
@@ -28,13 +25,15 @@ const imageData = [
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-tibetan/n02108551_978.jpg' },
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_3398.jpg' },
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_2947.jpg' },
-
+]
 //Image Creator Funtion
 function imageMaker(imageURL){
   let img = document.createElement('img');
    img.src = imageURL;
   return img;
 }
+//React Version of the same fuction
+//return <img src={dara.src}/>
 //Variable to store images placed in the image Creator
 let images = imageData.map((i) => {
   return imageMaker(i.imgageURL);
@@ -44,7 +43,6 @@ let secondary = document.querySelector('.secondary');
 images.forEach((img) => {
   secondary.prepend(img);
 });
-
 
 // TASK 1- Import the data we need to "hydrate" our component.
 //  On the one hand, the default export from data/panelData.js
