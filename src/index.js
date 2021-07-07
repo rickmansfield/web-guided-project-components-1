@@ -1,7 +1,7 @@
 const someData = ['foo', 'bar', 'baz', 'fizz']// this is raw data from a data server. 
 someData.forEach(str => {
-  const div = divMaker(str, 'grey');
-  document.body.prepend(div);
+  const div1 = divMaker(str, 'grey');
+  document.body.prepend(div1);
 });
 
 function divMaker(text, color){// Component takes raw data, returns DOM element(s)
@@ -12,13 +12,15 @@ function divMaker(text, color){// Component takes raw data, returns DOM element(
   return theNewDiv;//return
 }
 
+//React Versions
+// function divMaker(data){
+//   const { text, color } = data
+//   return <div style={{color: color}}>{text}</div>
+// }
 const div = divMaker('Lambda', 'red');
 document.body.prepend(div);
 const div2 = divMaker('web', 'green');
 document.body.prepend(div2);
-
-
-
 
 
 // TASK 0- Motivate demoing a small makeImage component
@@ -30,14 +32,17 @@ const imageData = [
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_2947.jpg' },
 ]
 //Image Creator Funtion
-function imageMaker(imageURL){
+function imageCreator(imgURL){
   let img = document.createElement('img');
-   img.src = imageURL;
+   img.src = imgURL;
   return img;
 }
+//React Version of the same fuction
+//return <img src={dara.src}/>
 //Variable to store images placed in the image Creator
-let images = imageData.map((i) => {
-  return imageMaker(i.imgageURL);
+let images = imageData.map((e) => {
+  return imageCreator(e.imageURL);
+  
 });
 //isolate place to put the newly created images & prend them there. 
 let secondary = document.querySelector('.secondary');
