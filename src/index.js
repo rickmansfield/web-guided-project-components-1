@@ -80,7 +80,7 @@ console.log(accordion);
 
 
 // TASK 4- Create a function 'makePanel' that creates a panel exactly as you see it in the HTML.
-function makePanel(title, content, open, close) {
+function makePanel(title, content) {
 
 
   // TASK 5- Instantiate all the elements needed for a panel
@@ -118,17 +118,30 @@ function makePanel(title, content, open, close) {
 
   // TASK 7- Add proper class names to our elements (See index.html for reference)
   // paying attention to the elements that need to start out hidden
+panel.classList.add('panel');
+panelBar.classList.add('panel-bar');
+panelButtons.classList.add('panel-Buttons');
+openButton.classList.add('panel-btn-open');
+closeButton.classList.add('panel-btn-close', 'hide-btn');
+panelContent.classList.add('panel-content');
 
 
   // TASK 8- Set text content using arguments as raw material
   //  and also using the open and close arrows imported at the top of the file
+panelTitle.textContent = title;
+panelContent.textContent = content;
+openButton.textContent = open;
+closeButton.textContent = close;
 
 
   // TASK 9- When the 'open' or 'close' buttons are clicked, the content is toggled on/off:
   //  - the open button needs to go away (the 'hide-btn' class name controls this)
   //  - the close button needs to show (the 'hide-btn' class name controls this)
   //  - the contents need to show (the 'toggle-on' class name controls this)
+panelButtons.addEventListener('click', (evt) => {
+  evt.
 
+});
 
   // don't forget to return the panel!
   return panel;
