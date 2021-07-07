@@ -28,12 +28,7 @@ const imageData = [
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-tibetan/n02108551_978.jpg' },
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_3398.jpg' },
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_2947.jpg' },
-<<<<<<< HEAD
-];
 
-=======
-]
->>>>>>> d54fb546c998892c10bce6c0d7f6592286a60e39
 //Image Creator Funtion
 function imageMaker(imageURL){
   let img = document.createElement('img');
