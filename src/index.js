@@ -57,11 +57,28 @@ let secondary = document.querySelector('.secondary');
 // images.forEach((img) => {
 //   secondary.prepend(img);
 // });
+
+
 // TASK 1- Import the data we need to "hydrate" our component.
 //  On the one hand, the default export from data/panelData.js
 //  On the other hand, the default export from data/constants.js
 //  Destructure `open` and `close` from the constants
+import panelData from './data/panelData';
+import constants from './data/constants';
 
+console.log(`CONSTANTS`,constants);
+
+//Old way to imort
+// const open = constants.open;
+// const close = constants.close;
+
+//REACT Version -->> 
+const { open, close } = constants; //destructuring
+
+// TASK 2- Verify our imports using log statements
+console.log(`PANEL DATA`,panelData); // log the panelData
+console.log(`OPEN Arrow`, open); // log the open arrow
+console.log('CLOSE arrow', close); // log the close arrow
 
 // TASK 2- Verify our imports using log statements
 console.log() // log the panelData
