@@ -81,10 +81,9 @@ console.log(`OPEN Arrow`, open); // log the open arrow
 console.log('CLOSE arrow', close); // log the close arrow
 
 // TASK 2- Verify our imports using log statements
-console.log() // log the panelData
-console.log() // log the open arrow
-console.log() // log the close arrow
-
+console.log(`PANEL DATA`,panelData); // log the panelData
+console.log(`OPEN Arrow`, open); // log the open arrow
+console.log('CLOSE arrow', close); // log the close arrow
 
 // TASK 3- Comment out the div.panel from index.html and grab its parent element.
 //  We will generate the panel with code, and we'll need the parent
@@ -98,13 +97,13 @@ function makePanel(title, content) {
 
 
   // TASK 5- Instantiate all the elements needed for a panel
-  const panel = null
-  const panelBar = null
-  const panelContent = null
-  const panelTitle = null
-  const panelButtons = null
-  const openButton = null
-  const closeButton = null
+  const panel = document.createElement('div');
+  const panelBar = document.createElement('div');
+  const panelContent = document.createElement('div');
+  const panelTitle = document.createElement('h3');
+  const panelButtons = document.createElement('h3');
+  const openButton = document.createElement('h3');
+  const closeButton = document.createElement('h3');
 
 
   // TASK 6- Setup the structure of our elements
