@@ -119,7 +119,12 @@ function makePanel(title, content) {
       <div></div>           // panelContent
     </div>
   */
-
+    panel.appendChild(panelBar);
+    panelBar.appendChild(panelTitle);
+    panelBar.appendChild(panelButtons);
+    panelButtons.appendChild(openButton);
+    panelButtons.appendChild(closeButton);
+    panel.appendChild(panelContent);
 
   // TASK 7- Add proper class names to our elements (See index.html for reference)
   // paying attention to the elements that need to start out hidden
