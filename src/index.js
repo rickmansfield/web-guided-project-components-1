@@ -1,3 +1,26 @@
+const someData = ['foo', 'bar', 'baz', 'fizz']// this is raw data from a data server. 
+// someData.forEach(str => {
+//   const div1 = divMaker(str, 'grey');
+//   document.body.prepend(div1);
+// });
+
+function divMaker(text, color){// Component takes raw data, returns DOM element(s)
+  const theNewDiv = document.createElement('div');//instantiation
+  theNewDiv.classList.add('nice-div');
+  theNewDiv.textContent = text;// add text
+  theNewDiv.style.color = color;// adding inline style
+  return theNewDiv;//return
+}
+
+//React Versions
+// function divMaker(data){
+//   const { text, color } = data
+//   return <div style={{color: color}}>{text}</div>
+// }
+const div = divMaker('Lambda', 'red');
+const div2 = divMaker('web', 'green');
+// document.body.prepend(div);
+// document.body.prepend(div2);
 // TASK 0- Motivate demoing a small makeImage component
 //  that takes an { imgURL } and returns an img element.
 //  Then loop over these URLs making images as you go:
