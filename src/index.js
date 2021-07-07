@@ -31,6 +31,32 @@ const imageData = [
 ]
 
 
+// TASK 0- Motivate demoing a small makeImage component
+//  that takes an { imgURL } and returns an img element.
+//  Then loop over these URLs making images as you go:
+const imageData = [
+  { imageURL: 'https://images.dog.ceo/breeds/mastiff-tibetan/n02108551_978.jpg' },
+  { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_3398.jpg' },
+  { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_2947.jpg' },
+]
+//Image Creator Funtion
+function imageCreator(imgURL){
+  let img = document.createElement('img');
+   img.src = imgURL;
+  return img;
+}
+//React Version of the same fuction
+//return <img src={dara.src}/>
+//Variable to store images placed in the image Creator
+let images = imageData.map((e) => {
+  return imageCreator(e.imageURL);
+  
+});
+//isolate place to put the newly created images & prend them there. 
+let secondary = document.querySelector('.secondary');
+// images.forEach((img) => {
+//   secondary.prepend(img);
+// });
 // TASK 1- Import the data we need to "hydrate" our component.
 //  On the one hand, the default export from data/panelData.js
 //  On the other hand, the default export from data/constants.js
