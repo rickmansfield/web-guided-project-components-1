@@ -141,7 +141,7 @@ closeButton.textContent = close;
 panelButtons.addEventListener('click', () => {
   openButton.classList.toggle("hide-btn");
   closeButton.classList.toggle("hide-btn");
-  // panelContent.classList.toggle("toggle-on");
+  panelContent.classList.toggle("toggle-on");
 
 });
 
@@ -153,7 +153,15 @@ console.log(makePanel('the title', 'the content'));
 // TASK 10- Loop through the panelData we imported from the data folder
 //  creating panels for each content and title and append them to the DOM.
 //  We can do this with a single forEach, or with a map and a forEach.
+panelData.forEach(objectPanel =>{
+  //New React way
+  // const { title, conent } objectPanel;
+  // const panel = makePanel(title, content);
 
+  //Traditional older way
+  const panel = makePanel(objectPanel.title, objectPanel.content);
+  accordion.appendChild(panel);
+});
 
 // [STRETCH] Comment out the links inside the nav and
 // write a linkMaker that takes { href, className, text }
