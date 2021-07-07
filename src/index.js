@@ -44,10 +44,7 @@ let secondary = document.querySelector('.secondary');
 images.forEach((img) => {
   secondary.prepend(img);
 });
-<<<<<<< HEAD
 
-=======
->>>>>>> d54fb546c998892c10bce6c0d7f6592286a60e39
 
 // TASK 1- Import the data we need to "hydrate" our component.
 //  On the one hand, the default export from data/panelData.js
