@@ -94,7 +94,7 @@ console.log(accordion);
 
 
 // TASK 4- Create a function 'makePanel' that creates a panel exactly as you see it in the HTML.
-function makePanel(/* what data does the panel need? */) {
+function makePanel(title, content) {
 
 
   // TASK 5- Instantiate all the elements needed for a panel
@@ -137,9 +137,10 @@ function makePanel(/* what data does the panel need? */) {
 
 
   // don't forget to return the panel!
-  return null
+  return panel;
 }
 
+console.log(makePanel('the title', 'the content'));
 
 // TASK 10- Loop through the panelData we imported from the data folder
 //  creating panels for each content and title and append them to the DOM.
