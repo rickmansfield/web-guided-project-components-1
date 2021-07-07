@@ -1,5 +1,12 @@
 # Components I
 
+## Contents
+
+- [Components I](#components-i)
+  - [Contents](#contents)
+  - [Running this project](#running-this-project)
+  - [Gab's Video](#gabs-video)
+
 ## Running this project
 
 This project is set up with [Parcel Bundler](https://parceljs.org/), an npm package
@@ -13,4 +20,6 @@ number if `1234` is being used by another application.
 - Run `npm install` to download the project's dependencies.
 - Run `npm start` to compile the project and spin up a dev server on `localhost`.
 
-test push
+## Gab's Video
+
+- [Gabriels Video](https://youtu.be/yyAS8K_EcM8)

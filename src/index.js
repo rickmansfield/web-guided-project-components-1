@@ -1,3 +1,26 @@
+const someData = ['foo', 'bar', 'baz', 'fizz']// this is raw data from a data server. 
+someData.forEach(str => {
+  const div = divMaker(str, 'grey');
+  document.body.prepend(div);
+});
+
+function divMaker(text, color){// Component takes raw data, returns DOM element(s)
+  const theNewDiv = document.createElement('div');//instantiation
+  theNewDiv.classList.add('nice-div');
+  theNewDiv.textContent = text;// add text
+  theNewDiv.style.color = color;// adding inline style
+  return theNewDiv;//return
+}
+
+const div = divMaker('Lambda', 'red');
+document.body.prepend(div);
+const div2 = divMaker('web', 'green');
+document.body.prepend(div2);
+
+
+
+
+
 // TASK 0- Motivate demoing a small makeImage component
 //  that takes an { imgURL } and returns an img element.
 //  Then loop over these URLs making images as you go:
@@ -5,7 +28,23 @@ const imageData = [
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-tibetan/n02108551_978.jpg' },
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_3398.jpg' },
   { imageURL: 'https://images.dog.ceo/breeds/mastiff-bull/n02108422_2947.jpg' },
-]
+];
+
+//Image Creator Funtion
+function imageMaker(imageURL){
+  let img = document.createElement('img');
+   img.src = imageURL;
+  return img;
+}
+//Variable to store images placed in the image Creator
+let images = imageData.map((i) => {
+  return imageMaker(i.imgageURL);
+});
+//isolate place to put the newly created images & prend them there. 
+let secondary = document.querySelector('.secondary');
+images.forEach((img) => {
+  secondary.prepend(img);
+});
 
 
 // TASK 1- Import the data we need to "hydrate" our component.
